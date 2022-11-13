@@ -195,6 +195,10 @@
             }
         }));
     }
+    let links = document.querySelectorAll(".menu__link");
+    for (let link of links) link.onclick = () => {
+        document.documentElement.classList.remove("lock", "menu-open");
+    };
     function uniqArray(array) {
         return array.filter((function(item, index, self) {
             return self.indexOf(item) === index;
